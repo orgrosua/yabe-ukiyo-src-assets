@@ -62,13 +62,16 @@
 
 <script setup>
 import { ref, watch, onMounted, onBeforeUnmount } from 'vue';
-import { Rive } from '@rive-app/canvas';
+import riveWASMResource from '@rive-app/canvas/rive.wasm?inline';
+import { Rive, RuntimeLoader } from '@rive-app/canvas';
 
 import WordpressNotice from './components/WordpressNotice.vue';
 
 import pupRiveFile from './rive/pup.riv';
 
 const pupRiveCanvas = ref(null);
+
+RuntimeLoader.setWasmUrl(riveWASMResource);
 
 /** @type {Rive} */
 let pupRive = null;

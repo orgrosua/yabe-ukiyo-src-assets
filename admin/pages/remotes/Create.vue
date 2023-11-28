@@ -210,7 +210,7 @@ function pasteToken() {
                         <td>
                             <div class="flex">
                                 <div class="rel flex mr:8 align-items:center">
-                                    <input :type="isRevealLicenseKey ? 'text' : 'password'" name="secret_license_key" v-model="licenseKey" autocomplete="current-password" class="min-w:300 hide::-ms-reveal" required>
+                                    <input :type="isRevealLicenseKey ? 'text' : 'password'" name="secret_license_key" v-model="licenseKey" autocomplete="current-password" class="min-w:300 hide::-ms-reveal">
                                     <span @click="isRevealLicenseKey = !isRevealLicenseKey" class="flex align-items:center ml:-24 fg:gray-60 fg:gray-40:hover cursor:pointer">
                                         <template v-if="!isRevealLicenseKey">
                                             <font-awesome-icon :icon="['fas', 'eye']" class="font:15" />
